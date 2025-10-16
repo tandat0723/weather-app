@@ -35,11 +35,8 @@ const App = () => {
 
     input.value = ''
 
-    // Prevent the default form submission behavior
     e.preventDefault()
   }
-
-
 
   useEffect(() => {
     setLoading(true)
@@ -77,7 +74,6 @@ const App = () => {
   }
 
   let icon
-
   switch (data.weather[0].main) {
     case 'Clouds':
       icon = <IoMdCloudy />
@@ -152,7 +148,7 @@ const App = () => {
                     {data.name}, {data.sys.country}
                   </div>
                   <div>
-                    {date.getUTCDate()}/{date.getUTCMonth() + 1} / {date.getUTCFullYear()}
+                    {date.getUTCDate()}/{date.getUTCMonth() + 1}/{date.getUTCFullYear()}
                   </div>
                 </div>
               </div>
